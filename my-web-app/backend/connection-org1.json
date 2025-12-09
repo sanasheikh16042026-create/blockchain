@@ -18,13 +18,13 @@
                 "peer0.org1.example.com"
             ],
             "certificateAuthorities": [
-                "ca.org1.example.com"
+                "https://ca.org1.example.com:7054"
             ]
         }
     },
     "peers": {
         "peer0.org1.example.com": {
-            "url": "grpcs://localhost:7051",
+            "url": "grpcs://peer0.org1.example.com:7051",
             "tlsCACerts": {
                 "pem": "-----BEGIN CERTIFICATE-----\nMIICJjCCAc2gAwIBAgIUL+hrQjwxBm3j4nCxQZ6gVkPOOmEwCgYIKoZIzj0EAwIw\ncDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQH\nEwZEdXJoYW0xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh\nLm9yZzEuZXhhbXBsZS5jb20wHhcNMjUxMjA5MTMzODAwWhcNNDAxMjA1MTMzODAw\nWjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzANBgNV\nBAcTBkR1cmhhbTEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEcMBoGA1UEAxMT\nY2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABEGW\nD9p9xkLecDy3PL7h/dE0udWlLsewPLjAh77DTAwh1RTp4lDRxpVU4FMsHulQRnLJ\np066AbXCxVvOPvsg6C6jRTBDMA4GA1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAG\nAQH/AgEBMB0GA1UdDgQWBBSsi09Wcn1ebXjJzT6A16WCwcqBEjAKBggqhkjOPQQD\nAgNHADBEAiB3OtyZJZmDpMzdj3N/uw0AxhX0rNlcOq14J0th0i+BEwIgZ7oy4gc9\n3XC7nzdEb5vMjXpUdvrtaio145EhmkzqAB0=\n-----END CERTIFICATE-----\n"
             },
