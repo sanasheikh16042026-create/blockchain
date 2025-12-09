@@ -9,9 +9,15 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// ✅ TEST ENDPOINT
+app.get('/api/test', (req, res) => {
+    res.json({ message: "Backend is working ✔" });
+});
+
 // Load connection profile
 const ccpPath = path.resolve(__dirname, 'connection-org1.json');
 const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
+
 
 async function getContract() {
     const wallet = await Wallets.newFileSystemWallet(path.join(__dirname, 'wallet'));
@@ -26,7 +32,7 @@ async function getContract() {
     await gateway.connect(ccp, {
         wallet,
         identity: 'admin',
-        discovery: { enabled: true, asLocalhost: true }
+        discovery: { enabled: true, asLocalhost: false }
     });
 
     const network = await gateway.getNetwork('mychannel');
